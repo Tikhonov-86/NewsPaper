@@ -1,0 +1,54 @@
+<!--  наследуемся от шаблона default.html, который мы создавали для flatpages -->
+{% extends 'flatpages/default.html' %}
+
+{% load custom_tags %}
+{% load censor_filter %}
+
+
+<!-- Название у нас будет posts -->
+{% block title %}
+Posts
+{% endblock title %}
+
+<!-- В контенте на странице мы выводим все новости -->
+{% block content %}
+    <br>
+    <h1>Все новости</h1>
+    <h3>{% current_time '%d %b %Y' %}</h3>
+    <form action="" method="get">
+        {{ filterset.form.as_p }}
+        <label for="meeting-time">Выберете время создания новости:</label>
+
+        <input type="datetime-local" id="meeting-time"
+        name="meeting-time" value="2023-04-07T00:00"
+        min="2023-04-07T00:00" max="2222-12-31T00:00">
+        <input type="submit" value="Найти" />
+    </form>
+    <hr>
+    {% if Posts %}
+        <table>
+            <tr>
+                <td>Заголовок</td>
+                <td>Содержание</td>
+                <td>Автор</td>
+                <td>Категория</td>
+                <td>Рейтинг</td>
+                <td>Дата создания</td>
+            </tr>
+
+            {% for Post in Posts %}
+            <tr>
+                <td>{{ Post.title|censor|truncatechars:15 }}</td>
+                <td>{{ Post.text|censor|truncatechars:20 }}</td>
+                <td>{{ Post.author.authorUser }}</td>
+                <td>{{ Post.categoryType }}</td>
+                <td>{{ Post.rating }}</td>
+                <td>{{ Post.dateCreation|date:'d M Y'}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <!-- Если постов нет, говорим, что постов нет ;) -->
+        <h2> Постов нет! </h2>
+    {% endif %}
+{% endblock content %}
