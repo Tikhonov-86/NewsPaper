@@ -1,0 +1,5 @@
+2023-10-11 16:56:24,991 INFO autoreload Watching for file changes with StatReloader
+2023-10-11 16:58:57,579 INFO autoreload /Users/aleksandrtihonov/PycharmProjects/NewsPaper/NewsPaper/NewsPaper/settings.py changed, reloading.
+2023-10-11 16:59:24,258 INFO autoreload Watching for file changes with StatReloader
+2023-10-11 17:00:29,639 INFO autoreload /Users/aleksandrtihonov/PycharmProjects/NewsPaper/NewsPaper/NewsPaper/settings.py changed, reloading.
+2023-10-12 07:05:03,615 INFO autoreload Watching for file changes with StatReloader
