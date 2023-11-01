@@ -22,16 +22,16 @@ msgstr ""
 
 #: newsapp/views.py:34
 msgid "Hello world"
-msgstr ""
+msgstr "Привет, мир"
 
 #: newsapp/views.py:41
 msgid "category name"
-msgstr ""
+msgstr "Имя категории"
 
 #: newsapp/views.py:50
 msgctxt "help text for MyModel model"
 msgid "This is the help text"
-msgstr ""
+msgstr "Вспомогательный текст"
 
 #: templates/accounts/email/base_message.txt:1
 #, python-format
