@@ -53,7 +53,7 @@ class Categories(models.Model):
                             help_text=_('category name'))  # добавим переводящийся текст подсказку к полю
 
 
-class MyMod(models.Model):
+class MyModel(models.Model):
     name = models.CharField(max_length=100)
     kind = models.ForeignKey(
         Category,

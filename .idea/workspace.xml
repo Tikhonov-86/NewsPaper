@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="792efefb-0823-490f-b69c-df3b14bb7558" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/newsapp/migrations/0006_remove_mymodel_kind_remove_mymodel_name_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newsapp/translation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newsapp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/newsapp/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/newsapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/newsapp/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/newsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/newsapp/views.py" afterDir="false" />
     </list>
