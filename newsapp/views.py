@@ -17,7 +17,7 @@ from django.core.cache import cache
 from django.views.decorators.cache import cache_page
 
 from .filters import PostFilter
-from .models import Post, Category, Subscription
+from .models import MyModel, Post, Category, Subscription
 from .forms import PostForm
 
 from django.db import models
@@ -36,12 +36,24 @@ class Index(View):
         return HttpResponse(string)
 
 
+class Index(View):
+    def get(self, request):
+        # . Translators: This message appears on the home page only
+        models = MyModel.objects.all()
+
+        context = {
+            'models': models,
+        }
+
+        return HttpResponse(render(request, 'index.html', context))
+
+
 class Categories(models.Model):
     name = models.CharField(max_length=100,
                             help_text=_('category name'))  # добавим переводящийся текст подсказку к полю
 
 
-class MyModel(models.Model):
+class MyMod(models.Model):
     name = models.CharField(max_length=100)
     kind = models.ForeignKey(
         Category,
