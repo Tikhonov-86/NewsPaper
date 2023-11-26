@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Post, MyModel
+from .models import Category, Post, Comment
 from modeltranslation.admin import TranslationAdmin  #импортируем модель амдинки (вспоминаем модуль про переопределение стандартных админ-инструментов)
 
 
@@ -14,10 +14,14 @@ class CategoryAdmin(TranslationAdmin):
     model = Category
 
 
-class MyModelAdmin(TranslationAdmin):
-    model = MyModel
+class CommentAdmin(TranslationAdmin):
+    model = Comment
 
 
-admin.site.register(MyModel)
-admin.site.register(Category)
-admin.site.register(Post, PostAdmin)
+class TransPostAdmin(PostAdmin, TranslationAdmin):
+    model = Comment
+
+
+admin.site.register(Comment, CommentAdmin)
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(Post, TransPostAdmin)

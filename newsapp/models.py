@@ -5,6 +5,7 @@ from django.urls import reverse
 from django.core.validators import MinValueValidator
 
 from django.core.cache import cache
+from django.utils.translation import pgettext_lazy
 
 
 class Author(models.Model):
@@ -105,7 +106,11 @@ class Subscription(models.Model):
 
 
 class MyModel(models.Model):
-    pass
-    # first_name = models.CharField(max_length=30)
-    # last_name = models.CharField(max_length=30)
+    name = models.CharField(max_length=100)
+    kind = models.ForeignKey(
+        Category,
+        on_delete=models.CASCADE,
+        related_name='kinds',
+        verbose_name=pgettext_lazy('help text for MyModel model', 'This is the help text'),
+    )
 
