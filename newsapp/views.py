@@ -1,12 +1,13 @@
 from datetime import datetime
 
+from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 from django.db.models import Exists, OuterRef
 from django.views.generic.base import View
 from django.views.decorators.csrf import csrf_protect
 from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.urls import reverse_lazy
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views.generic import (
     ListView, DetailView, CreateView, UpdateView, DeleteView
@@ -23,6 +24,9 @@ from .forms import PostForm
 from django.db import models
 from django.utils.translation import gettext as _
 from django.utils.translation import pgettext_lazy  # импортируем «ленивый» геттекст с подсказкой
+# from django.utils.translation import activate, get_supported_language_variant
+
+import pytz
 
 import logging
 
@@ -38,14 +42,26 @@ class Index(View):
 
 class Index(View):
     def get(self, request):
-        # . Translators: This message appears on the home page only
         models = MyModel.objects.all()
 
         context = {
             'models': models,
+            'current_time': timezone.localtime(timezone.now()),
+            'timezones': pytz.common_timezones  # добавляем в контекст все доступные часовые пояса
         }
 
         return HttpResponse(render(request, 'index.html', context))
+
+    # по пост-запросу будем добавлять в сессию часовой пояс,
+    # который и будет обрабатываться написанным нами ранее middleware
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect('/')
+
+
+class Index(View):
+    def get(self, request):
+        current_time = timezone.now()
 
 
 class Categories(models.Model):
