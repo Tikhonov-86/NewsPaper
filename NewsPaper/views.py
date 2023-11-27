@@ -6,7 +6,6 @@ from datetime import datetime, timedelta
 
 class IndexView(View):
     def get(self, request):
-        printer.apply_async([10],
-                            eta=datetime.now() + timedelta(seconds=5))
+        printer.delay(1)
         hello.delay()
         return HttpResponse('Hello!')

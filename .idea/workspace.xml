@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="792efefb-0823-490f-b69c-df3b14bb7558" name="Changes" comment="Commit 2.3">
+    <list default="true" id="792efefb-0823-490f-b69c-df3b14bb7558" name="Changes" comment="Commit 2.31">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/celery.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/celery.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/tasks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general.log" beforeDir="false" afterPath="$PROJECT_DIR$/general.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701013052859</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Commit 2.31">
+      <created>1701022928705</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701022928705</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -84,6 +96,7 @@
     <MESSAGE value="Commit 2.02" />
     <MESSAGE value="Commit 2.03" />
     <MESSAGE value="Commit 2.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 2.3" />
+    <MESSAGE value="Commit 2.31" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 2.31" />
   </component>
 </project>
