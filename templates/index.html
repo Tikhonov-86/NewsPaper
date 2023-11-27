@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page title</title>
+    <title>Translation en/ru</title>
 </head>
 <body>
     <form action="{% url 'set_language' %}" method="POST"> {% csrf_token %} <!-- Не забываем по csrf_token для POST-запросов -->
@@ -23,8 +23,13 @@
         </select>
         <input type="submit" value="set">
     </form>
- 
+
+    {{ string }}
+    {% trans "Hello world" %}!
+    {% trans "Check out my new cool translation" %}!
+
     {% for model in models %}
+
     <div class="model-class">
         {{ model.name }}
     </div>

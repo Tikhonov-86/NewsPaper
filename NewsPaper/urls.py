@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import IndexView
+from . import views
 
 urlpatterns = [
    path('i18n/', include('django.conf.urls.i18n')),  #подключаем встроенные эндопинты для работы с локализацией
@@ -26,5 +26,4 @@ urlpatterns = [
    # path('news/', include('newsapp.urls')),
    path('', include('newsapp.urls')),
    path('', include('accounts.urls')),
-   path('index/', IndexView.as_view()),
 ]

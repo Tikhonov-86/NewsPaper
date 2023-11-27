@@ -33,6 +33,10 @@ msgctxt "help text for MyModel model"
 msgid "This is the help text"
 msgstr "Вспомогательный текст"
 
+#: .\templates\index.html:28
+msgid "Check out my new cool translation"
+msgstr "Оцени мой классный перевод"
+
 #: templates/accounts/email/base_message.txt:1
 #, python-format
 msgid "Приветствуем на %(site_name)s!"

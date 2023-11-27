@@ -19,4 +19,5 @@ urlpatterns = [
    path('subscriptions/', subscriptions, name='subscriptions'),
    # path('categories/<int:pk>/subscribe/', subscribe, name='subscribe'),
    path('categories/<int:pk>', views.CategoryListView.as_view(), name='category_list'),
+   path('index/', views.Index.as_view()),
 ]
