@@ -56,12 +56,7 @@ class Index(View):
     # который и будет обрабатываться написанным нами ранее middleware
     def post(self, request):
         request.session['django_timezone'] = request.POST['timezone']
-        return redirect('/')
-
-
-class Index(View):
-    def get(self, request):
-        current_time = timezone.now()
+        return redirect('/index/')
 
 
 class Categories(models.Model):
