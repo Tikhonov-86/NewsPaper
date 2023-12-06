@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'newsapp',
     'accounts',
     'django_filters',
+    'rest_framework',
 
     'allauth',
     'allauth.account',

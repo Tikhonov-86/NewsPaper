@@ -18,6 +18,16 @@ from django.contrib import admin
 from django.urls import path, include
 from . import views
 
+from rest_framework import routers
+from newsapp import views
+
+
+router = routers.DefaultRouter()
+router.register(r'author', views.AuthorViewset)
+router.register(r'post', views.PostViewset)
+router.register(r'comment', views.CommentViewest)
+
+
 urlpatterns = [
    path('i18n/', include('django.conf.urls.i18n')),  #подключаем встроенные эндопинты для работы с локализацией
    path('admin/', admin.site.urls, name='admin'),
@@ -26,4 +36,6 @@ urlpatterns = [
    # path('news/', include('newsapp.urls')),
    path('', include('newsapp.urls')),
    path('', include('accounts.urls')),
+   path('api/', include(router.urls)),
+   path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

@@ -1,6 +1,7 @@
 from .views import subscriptions
 from django.urls import path
 from . import views
+from django.views.generic import TemplateView
 
 
 urlpatterns = [
@@ -20,4 +21,9 @@ urlpatterns = [
    # path('categories/<int:pk>/subscribe/', subscribe, name='subscribe'),
    path('categories/<int:pk>', views.CategoryListView.as_view(), name='category_list'),
    path('index/', views.Index.as_view()),
+   path('swagger-ui/', TemplateView.as_view(
+       template_name='swagger-ui.html',
+       extra_context={'schema_url':'openapi-schema'}
+   ), name='swagger-ui'),
+
 ]

@@ -26,6 +26,12 @@ from django.utils.translation import gettext as _
 from django.utils.translation import pgettext_lazy  # импортируем «ленивый» геттекст с подсказкой
 # from django.utils.translation import activate, get_supported_language_variant
 
+from rest_framework import viewsets
+from rest_framework import permissions
+
+from newsapp.serializers import *
+from newsapp.models import *
+
 import pytz
 
 import logging
@@ -57,6 +63,21 @@ class Index(View):
     def post(self, request):
         request.session['django_timezone'] = request.POST['timezone']
         return redirect('/index/')
+
+
+class AuthorViewset(viewsets.ModelViewSet):
+   queryset = Author.objects.all()
+   serializer_class = AuthorSerializer
+
+
+class PostViewset(viewsets.ModelViewSet):
+   queryset = Post.objects.all()
+   serializer_class = PostSerializer
+
+
+class CommentViewest(viewsets.ModelViewSet):
+   queryset = Comment.objects.all()
+   serializer_class = CommentSerializer
 
 
 class Categories(models.Model):
