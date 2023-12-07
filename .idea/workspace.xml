@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="792efefb-0823-490f-b69c-df3b14bb7558" name="Changes" comment="Commit 2.41">
-      <change afterPath="$PROJECT_DIR$/newsapp/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/openapi-schema.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/swagger-ui.html" afterDir="false" />
+    <list default="true" id="792efefb-0823-490f-b69c-df3b14bb7558" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newsapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/newsapp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/newsapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/openapi-schema.yml" beforeDir="false" afterPath="$PROJECT_DIR$/static/openapi-schema.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +119,21 @@
       <option name="project" value="LOCAL" />
       <updated>1701196209835</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Commit 2.42">
+      <created>1701858941958</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1701858941958</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Commit 2.42">
+      <created>1701858956888</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1701858956888</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -140,6 +147,7 @@
     <MESSAGE value="Commit 2.33-1" />
     <MESSAGE value="Commit 2.4" />
     <MESSAGE value="Commit 2.41" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 2.41" />
+    <MESSAGE value="Commit 2.42" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 2.42" />
   </component>
 </project>

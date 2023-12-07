@@ -1,57 +1,134 @@
-openapi: 3.0.2
+openapi: 3.0.0
 info:
-    title: 'Портал новостей OpenAPI'
-    version: 0.0.1
+  title: Портал новостей OpenApi спецификация
+  version: 0.0.1
 servers:
-    - url: http://127.0.0.1:8000/
+  - url: http://127.0.0.1:8000/
     description: ''
 paths:
-  /news/:
+  /api/articles/:
     get:
-      operationId: Список новостей/статей
-      description: 'Список новостей/статьей'
-      parameters: []
-      responses:
-        '200':
-          content:
-          application/json:
-            schema:
-              type: array
-              items:
-                  $ref: '#/components/schemas/News'
-          description: ''
+      summary: Метод получения новостей
       tags:
         - news
-
-    post:
-      operationId: Создание новости/статьи
-      description: 'Создание новости/статьи'
-      parameters: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/News/create'
+      operationId: getAllNews
       responses:
-        '201':
+        '200':
+          description: Успешный ответ со списком новостей
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/News/create'
-          description: ''
+                $ref: "#/components/schemas/News"
+        'default':
+          description: Все нестандартное
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    post:
+      summary: Метод создания новости
       tags:
         - news
-
+      operationId: createNew
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/New"
+      responses:
+        '201':
+          description: Успешный ответ с одной новостью
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/New"
+        'default':
+          description: Все нестандартное
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /api/articles/{id}:
+    get:
+      summary: Метод получения новости по идентификатору
+      tags:
+        - news
+      operationId: getNewById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Идентификатор новости
+          schema:
+            type: string
+          example: 123
+      responses:
+        '200':
+          description: Успешный ответ с одной новостью
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/New"
+        'default':
+          description: Все нестандартное
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    delete:
+      summary: Метод удаления новости по идентификатору
+      tags:
+        - news
+      operationId: deleteNewById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Идентификатор новости
+          schema:
+            type: string
+          example: 123
+      responses:
+        '204':
+          description: Нет контента (Успешное удаление)
+          content:
+            application/json: {}
+        'default':
+          description: Все нестандартное
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
 components:
   schemas:
-    News:
+    New:
       type: object
-      properties:
-        id:
-          type: integer
-          readOnly: true
-        name:
-          type: string
-          maxLength: 64
       required:
-        - name
+        - pk
+        - post_header
+        - post_text
+      properties:
+        pk:
+          type: string
+          example: 123
+        post_header:
+          type: string
+          description: Заголовок новости
+        post_text:
+          type: string
+          description: Текст новости
+    News:
+      type: array
+      items:
+        $ref: "#/components/schemas/New"
+    Error:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+        message:
+          type: string
