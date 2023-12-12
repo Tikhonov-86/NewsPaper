@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="792efefb-0823-490f-b69c-df3b14bb7558" name="Changes" comment="Commit 2.5">
-      <change afterPath="$PROJECT_DIR$/openapi-schema.yml" afterDir="false" />
+    <list default="true" id="792efefb-0823-490f-b69c-df3b14bb7558" name="Changes" comment="Commit 2.51">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewsPaper/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701970191196</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Commit 2.51">
+      <created>1702234504009</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1702234504009</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -157,6 +162,7 @@
     <MESSAGE value="Commit 2.41" />
     <MESSAGE value="Commit 2.42" />
     <MESSAGE value="Commit 2.5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 2.5" />
+    <MESSAGE value="Commit 2.51" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 2.51" />
   </component>
 </project>
