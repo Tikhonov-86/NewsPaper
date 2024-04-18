@@ -18,7 +18,7 @@ from django.core.cache import cache
 from django.views.decorators.cache import cache_page
 
 from .filters import PostFilter
-from .models import MyModel, Post, Category, Subscription
+from .models import MyModel, Post, Category, Subscription, Author, Comment
 from .forms import PostForm
 
 from django.db import models
@@ -35,6 +35,8 @@ from newsapp.models import *
 import pytz
 
 import logging
+
+from .serializers import AuthorSerializer, PostSerializer, CommentSerializer
 
 logger = logging.getLogger(__name__)
 
